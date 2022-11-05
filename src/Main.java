@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -28,8 +29,8 @@ public class Main {
         for (int i = 0; i < 15; i++){
             try {
                 q[i+2] = -(-arr[i]+arr[i+2])/arr[i+1];
-                s[i + 2] = s[i] - q[i + 2] * s[i + 1];
-                t[i + 2] = t[i] - q[i + 2] * t[i + 1];
+                s[i + 2] =s[i] - q[i + 2] * s[i + 1];
+                t[i + 2] =t[i] - q[i + 2] * t[i + 1];
 
             } catch (Exception e){
 
@@ -46,13 +47,17 @@ public class Main {
     public static int sfd(int a, int b, int i, int[] arr){
         if (i == -1){
             arr[0]=a;
+            arr[1]=b;
         }
         if (a== 0){
             return b;
         }
-        int r = b % a;
+        int r = 0;
+        while (b<0) b+=a;
+        int mod_res=b%a;
+        r = mod_res;
         i = i+1;
-        arr[i+1] = r;
+        arr[i + 1] = r;
         return sfd(r, a, i, arr);
     }
 }
