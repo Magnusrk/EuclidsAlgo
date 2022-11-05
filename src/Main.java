@@ -37,7 +37,7 @@ public class Main {
             if (arr[i+1] == -1000){
                 break;
             }else {
-                System.out.println("r" + (i - 1) + " " + arr[i] + "\t | " + q[i] + "\t | s" + (i - 1) + " " + s[i] + "\t | t" + (i - 1) + " " + t[i]);
+                System.out.println("i " + (i-1) + "\t | r" + (i - 1) + " " + arr[i] + "\t | " + "q" + (i - 1) + " " + q[i] + "\t | s" + (i - 1) + " " + s[i] + "\t | t" + (i - 1) + " " + t[i]);
             }
 
         }
